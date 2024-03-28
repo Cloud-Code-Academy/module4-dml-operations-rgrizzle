@@ -1,10 +1,21 @@
-// Use .apex files to store anonymous Apex.
-// You can execute anonymous Apex in VS Code by selecting the
-//     apex text and running the command:
-//     SFDX: Execute Anonymous Apex with Currently Selected Text
-// You can also execute the entire file by running the command:
-//     SFDX: Execute Anonymous Apex with Editor Contents
+class Dog{
+    String name;
+    String color;
+    Integer age;
 
-string tempvar = 'Enter_your_name_here';
-System.debug('Hello World!');
-System.debug('My name is ' + tempvar);
+     public Dog(String name, String color, Integer age){
+        this.name = name;
+        this.color = color;
+        this.age = age;
+     }   
+
+     String speak(){
+    return 'Hello, my name is ' + name + ' I am ' + age + ' years old and my color is ' + color;
+}
+} 
+
+Dog Sparky = new Dog('Sparky','Brown',3);
+
+
+System.debug(Sparky.speak());
+
